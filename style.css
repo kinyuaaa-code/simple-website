@@ -1,0 +1,88 @@
+/* Simple website styling */
+
+:root {
+  --bg-color: #f5f7fa;
+  --text-color: #2d3a4b;
+  --accent-color: #4a90e2;
+  --card-color: #ffffff;
+  --border-color: #dfe4ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header,
+footer {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header h1,
+footer p {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(45, 58, 75, 0.08);
+}
+
+button,
+input[type="submit"] {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #3b79c0;
+}
+
+@media (max-width: 640px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  header,
+  footer {
+    padding: 1rem;
+  }
+}
